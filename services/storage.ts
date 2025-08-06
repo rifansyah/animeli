@@ -1,6 +1,8 @@
 import { MMKV } from "react-native-mmkv";
 
-export const storage = new MMKV();
+const storage = new MMKV();
+
+export const getStorage = () => storage;
 
 export const set = (key: string, value: any) => {
   storage.set(key, JSON.stringify(value));

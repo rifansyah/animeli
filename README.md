@@ -2,6 +2,10 @@
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
+## Requirements
+
+- Node version >= 20.18.1
+
 ## Get started
 
 1. Install dependencies
@@ -25,16 +29,17 @@ In the output, you'll find options to open the app in a
 
 You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
 
-## Learn more
+## Technical Notes
 
-To learn more about developing your project with Expo, look at the following resources:
+- integration test should be / better be done using testID, i used text to make development faster
+-
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## Screen Record
 
-## Join the community
+## Screen Record
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+| Screen Name  | Link                                                           |
+| ------------ | -------------------------------------------------------------- |
+| Record       | <video src=".github/images/record.mp4"  controls width="300"/> |
+| gener filter | <video src=".github/images/filter.mp4" controls width="300" /> |
+| details      | <img src=".github/images//ss2.png" />                          |

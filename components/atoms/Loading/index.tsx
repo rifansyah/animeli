@@ -1,3 +1,4 @@
+import { Colors } from "@/constants/Colors";
 import React from "react";
 import { ActivityIndicator, StyleProp, View, ViewStyle } from "react-native";
 import styles from "./styles";
@@ -10,7 +11,7 @@ interface LoadingProps {
 const Loading = ({ style, size = "small" }: LoadingProps) => {
   return (
     <View style={[styles.container, style]}>
-      <ActivityIndicator size={size} />
+      <ActivityIndicator size={size} color={Colors.primary} />
     </View>
   );
 };

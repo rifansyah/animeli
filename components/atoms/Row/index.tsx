@@ -1,9 +1,9 @@
 import React from "react";
-import { View, ViewProps, ViewStyle } from "react-native";
+import { StyleProp, View, ViewProps, ViewStyle } from "react-native";
 
 interface RowProps extends ViewProps {
   children?: React.ReactNode;
-  style?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
 }
 
 const Row: React.FC<RowProps> = ({ children, style, ...props }) => {

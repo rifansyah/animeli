@@ -1,3 +1,4 @@
+import { Colors } from "@/constants/Colors";
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
@@ -9,5 +10,6 @@ export default StyleSheet.create({
   textTitle: {
     fontWeight: "bold",
     fontSize: 16,
+    color: Colors.white,
   },
 });

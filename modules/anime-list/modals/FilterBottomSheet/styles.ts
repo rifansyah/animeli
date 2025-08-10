@@ -5,9 +5,13 @@ export default StyleSheet.create({
   bottomSheet: {
     paddingHorizontal: 16,
   },
+  backgroundBottomSheet: {
+    backgroundColor: Colors.background,
+  },
   textTitle: {
     fontSize: 16,
     marginBottom: 16,
+    color: Colors.white,
   },
   rowGenres: {
     flexWrap: "wrap",
@@ -24,9 +28,10 @@ export default StyleSheet.create({
   textSelected: {
     color: Colors.primary,
     marginRight: 4,
+    marginBottom: 2,
   },
   textNoSelected: {
-    color: Colors.grey,
+    color: Colors.grey2,
     textAlign: "center",
   },
   separator: {

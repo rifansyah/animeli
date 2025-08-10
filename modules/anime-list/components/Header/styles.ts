@@ -14,6 +14,7 @@ export default StyleSheet.create({
   textTitle: {
     fontSize: 16,
     fontWeight: "bold",
+    color: Colors.white,
   },
   dot: {
     position: "absolute",

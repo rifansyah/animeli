@@ -1,4 +1,5 @@
 import Row from "@/components/atoms/Row";
+import { Colors } from "@/constants/Colors";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import React, { memo } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
@@ -14,7 +15,7 @@ const Header = ({ onPressFilter, filterCount }: Props) => {
       <Text style={styles.textTitle}>Anime List</Text>
 
       <TouchableOpacity onPress={onPressFilter} style={styles.containerFilter}>
-        <AntDesign name="filter" size={28} />
+        <AntDesign name="filter" color={Colors.white} size={28} />
         {!!filterCount && (
           <View style={styles.dot}>
             <Text style={styles.textDot}>{filterCount}</Text>

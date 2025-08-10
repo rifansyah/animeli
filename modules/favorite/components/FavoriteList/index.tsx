@@ -28,7 +28,7 @@ const FavoriteList = () => {
   if (!favoriteList?.length) {
     return (
       <View style={styles.containerNoFavorite}>
-        <Text>No Favorite so far 😱</Text>
+        <Text style={styles.textNoFavorite}>No Favorite so far 😱</Text>
       </View>
     );
   }

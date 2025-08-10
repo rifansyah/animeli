@@ -56,7 +56,7 @@ const AnimeList = ({
   if (!isLoading && !data?.length) {
     return (
       <View style={styles.containerNotFound}>
-        <Text>{`Couldn't give you the anime you wanted 😭`}</Text>
+        <Text style={styles.textNotFound}>{`Couldn't give you the anime you wanted 😭`}</Text>
       </View>
     );
   }

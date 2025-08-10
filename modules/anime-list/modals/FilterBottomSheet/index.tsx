@@ -76,6 +76,7 @@ const FilterBottomSheet = ({
       onChange={onChangeBS}
       maxDynamicContentSize={600}
       style={styles.bottomSheet}
+      backgroundStyle={styles.backgroundBottomSheet}
     >
       <Col>
         <Text style={styles.textTitle}>Selected genres:</Text>

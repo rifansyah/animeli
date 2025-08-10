@@ -7,15 +7,11 @@ export default StyleSheet.create({
   },
   containerContent: {
     flex: 1,
-    marginHorizontal: 8,
+    marginHorizontal: 16,
     justifyContent: "center",
   },
   containerRank: {
     position: "absolute",
-    backgroundColor: Colors.primary,
-    paddingHorizontal: 4,
-    paddingVertical: 2,
-    borderRadius: 16,
     top: 8,
     left: 8,
   },
@@ -24,17 +20,14 @@ export default StyleSheet.create({
     width: 100,
     borderRadius: 16,
   },
-  textRank: {
-    color: Colors.white,
-    fontSize: 10,
-    fontWeight: "bold",
-  },
   textTitle: {
     fontSize: 16,
     fontWeight: "bold",
+    color: Colors.white,
   },
   textContent: {
     fontSize: 12,
     marginTop: 8,
+    color: Colors.white,
   },
 });

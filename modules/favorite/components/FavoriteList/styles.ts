@@ -1,3 +1,4 @@
+import { Colors } from "@/constants/Colors";
 import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
@@ -10,6 +11,9 @@ export default StyleSheet.create({
     height: "100%",
     alignItems: "center",
     paddingTop: 120,
+  },
+  textNoFavorite: {
+    color: Colors.white,
   },
   loadingFooter: {
     height: 164,

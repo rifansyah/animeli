@@ -1,0 +1,18 @@
+import React from "react";
+import { ActivityIndicator, StyleProp, View, ViewStyle } from "react-native";
+import styles from "./styles";
+
+interface LoadingProps {
+  style?: StyleProp<ViewStyle>;
+  size?: "small" | "large";
+}
+
+const Loading = ({ style, size = "small" }: LoadingProps) => {
+  return (
+    <View style={[styles.container, style]}>
+      <ActivityIndicator size={size} />
+    </View>
+  );
+};
+
+export default Loading;

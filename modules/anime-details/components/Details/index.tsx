@@ -17,11 +17,11 @@ const Details = ({ anime }: Props) => {
       <Text style={styles.textTitle}>Details</Text>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <Row style={{ gap: 16 }}>
-          <DetailsCard title="Studio" value={anime?.studios[0].name} />
+          <DetailsCard title="Studio" value={anime?.studios?.[0]?.name} />
           <DetailsCard title="Episodes" value={anime?.episodes?.toString()} />
           <DetailsCard title="Status" value={anime?.status} />
           <DetailsCard title="Type" value={anime?.type} />
-          <DetailsCard title="licensors" value={anime?.licensors[0].name} />
+          <DetailsCard title="Licensors" value={anime?.licensors?.[0]?.name} />
         </Row>
       </ScrollView>
     </Col>

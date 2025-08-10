@@ -36,7 +36,6 @@ const AnimeListCard = ({ data }: Props) => {
         <Row>
           <View>
             <Animated.Image
-              sharedTransitionTag={`anime-details-${data.mal_id}`}
               source={{ uri: data.images.webp.image_url }}
               style={styles.image}
             />

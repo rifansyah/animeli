@@ -1,23 +1,27 @@
+import { Anime } from "@/services/api/anime.type";
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
 import storageMiddleware from "./storage-middleware";
 
 interface FavoriteState {
-  favorites: string[];
-  addFavorite: (id: string) => void;
-  removeFavorite: (id: string) => void;
+  favorites: Record<number, Anime>;
+  addFavorite: (anime: Anime) => void;
+  removeFavorite: (id: number) => void;
 }
 
 export const useFavoriteStore = create(
   persist<FavoriteState>(
     (set) => ({
-      favorites: [],
-      addFavorite: (id) =>
-        set((state) => ({ favorites: [...state.favorites, id] })),
-      removeFavorite: (id) =>
+      favorites: {},
+      addFavorite: (anime) =>
         set((state) => ({
-          favorites: state.favorites.filter((favorite) => favorite !== id),
+          favorites: { ...state.favorites, [anime.mal_id]: anime },
         })),
+      removeFavorite: (id) =>
+        set((state) => {
+          const { [id]: _, ...rest } = state.favorites;
+          return { favorites: rest };
+        }),
     }),
     {
       name: "favorite-store",

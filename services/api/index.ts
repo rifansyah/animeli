@@ -1,4 +1,5 @@
 import axios, { AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios";
+import Toast from "react-native-toast-message";
 
 const BASE_URL = "https://api.jikan.moe/v4";
 
@@ -49,12 +50,19 @@ class ApiService {
   ): Promise<ApiResponse<T>> {
     try {
       const response = await apiClient.get<T>(endpoint, config);
+
       return {
         data: response.data,
         status: response.status,
         statusText: response.statusText,
       };
-    } catch (error) {
+    } catch (error: any) {
+      Toast.show({
+        type: "error",
+        text1: "Api error",
+        text2: error.message || error,
+      });
+
       throw error;
     }
   }

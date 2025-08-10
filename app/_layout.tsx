@@ -13,6 +13,7 @@ import { reactQueryClient } from "@/services/api/queries/config";
 import { BottomSheetModalProvider } from "@gorhom/bottom-sheet";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import Toast from "react-native-toast-message";
 
 export default function RootLayout() {
   const colorScheme = useColorScheme();
@@ -33,11 +34,15 @@ export default function RootLayout() {
           <BottomSheetModalProvider>
             <Stack>
               <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-              <Stack.Screen name="anime-details/[id]" options={{ headerShown: false }} />
+              <Stack.Screen
+                name="anime-details/[id]"
+                options={{ headerShown: false }}
+              />
               <Stack.Screen name="+not-found" />
             </Stack>
           </BottomSheetModalProvider>
           <StatusBar style="light" />
+          <Toast />
         </ThemeProvider>
       </GestureHandlerRootView>
     </QueryClientProvider>

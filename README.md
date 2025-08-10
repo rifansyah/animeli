@@ -40,6 +40,7 @@ You can start developing by editing the files inside the **app** directory. This
 
 | Screen Name  | Link                                                           |
 | ------------ | -------------------------------------------------------------- |
-| Record       | <video src=".github/images/record.mp4"  controls width="300"/> |
-| gener filter | <video src=".github/images/filter.mp4" controls width="300" /> |
-| details      | <img src=".github/images//ss2.png" />                          |
+| Record       | <video src="https://github.com/user-attachments/assets/58cfa52a-d809-457e-9a2f-eeb0b5d82b18" /> |
+| gener filter | <video src="https://github.com/user-attachments/assets/543f4cc1-1d3a-4281-a232-fed2e30441e4" /> |
+| details      | <img src="https://github.com/user-attachments/assets/7692c514-a8a0-40bd-bac6-471aaab6e94a" />                          |
+

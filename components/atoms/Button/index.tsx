@@ -34,6 +34,7 @@ const Button = ({
 
   return (
     <TouchableOpacity
+      role="button"
       onPress={onPress}
       style={[styles.container, containerStyle, style]}
     >

@@ -10,7 +10,7 @@ interface LoadingProps {
 
 const Loading = ({ style, size = "small" }: LoadingProps) => {
   return (
-    <View style={[styles.container, style]}>
+    <View testID="loading" style={[styles.container, style]}>
       <ActivityIndicator size={size} color={Colors.primary} />
     </View>
   );

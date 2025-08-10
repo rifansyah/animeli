@@ -1,10 +1,15 @@
+import Header from "@/components/molecules/Header";
+import FavoriteList from "@/modules/favorite/components/FavoriteList";
 import React from "react";
-import { Text, View } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const favorite = () => {
-  return <View>
-    <Text>favorite</Text>
-  </View>;
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <Header title="Enjoy Your Favorites 😊" />
+      <FavoriteList />
+    </SafeAreaView>
+  );
 };
 
 export default favorite;

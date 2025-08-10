@@ -1,4 +1,5 @@
 import Loading from "@/components/atoms/Loading";
+import { Colors } from "@/constants/Colors";
 import AnimeList from "@/modules/anime-list/components/AnimeList";
 import Header from "@/modules/anime-list/components/Header";
 import useAnimeListData from "@/modules/anime-list/hooks/useAnimeListData";
@@ -9,7 +10,7 @@ const FilterBottomSheet = React.lazy(
   () => import("@/modules/anime-list/modals/FilterBottomSheet")
 );
 
-export default function TabTwoScreen() {
+export default function AnimeListPage() {
   const [isOpenFilterBottomSheet, setIsOpenFilterBottomSheet] = useState(false);
 
   const {
@@ -32,7 +33,7 @@ export default function TabTwoScreen() {
   }, []);
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: Colors.background }}>
       <Header
         onPressFilter={openFilterBottomSheet}
         filterCount={filter?.genre_ids?.length}

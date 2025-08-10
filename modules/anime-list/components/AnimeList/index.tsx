@@ -1,3 +1,4 @@
+import Button from "@/components/atoms/Button";
 import Loading from "@/components/atoms/Loading";
 import { Colors } from "@/constants/Colors";
 import { Anime } from "@/services/api/anime.type";
@@ -56,7 +57,10 @@ const AnimeList = ({
   if (!isLoading && !data?.length) {
     return (
       <View style={styles.containerNotFound}>
-        <Text style={styles.textNotFound}>{`Couldn't give you the anime you wanted 😭`}</Text>
+        <Text style={styles.textNotFound}>
+          {`Couldn't give you the anime you wanted 😭`}
+        </Text>
+        <Button onPress={onRefresh} text="Try again" />
       </View>
     );
   }

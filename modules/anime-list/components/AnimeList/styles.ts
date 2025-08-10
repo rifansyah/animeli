@@ -14,6 +14,7 @@ export default StyleSheet.create({
   },
   textNotFound: {
     color: Colors.white,
+    marginBottom: 16,
   },
   loadingFooter: {
     height: 164,

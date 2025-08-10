@@ -18,18 +18,18 @@ export interface Anime {
   mal_id: number;
   url: string;
   images: AnimeImages;
-  trailer?: Trailer | null;
+  trailer?: Trailer;
   approved: boolean;
 
   titles: Title[];
   title: string;
-  title_english?: string | null;
-  title_japanese?: string | null;
+  title_english?: string;
+  title_japanese?: string;
   title_synonyms: string[];
 
   type: "TV" | "Movie" | "OVA" | "Special" | "ONA" | "Music" | (string & {});
-  source?: string | null;
-  episodes?: number | null;
+  source?: string;
+  episodes?: number;
   status:
     | "Finished Airing"
     | "Currently Airing"
@@ -39,21 +39,21 @@ export interface Anime {
 
   aired: Aired;
 
-  duration?: string | null;
-  rating?: string | null;
-  score?: number | null;
-  scored_by?: number | null;
-  rank?: number | null;
-  popularity?: number | null;
-  members?: number | null;
-  favorites?: number | null;
+  duration?: string;
+  rating?: string;
+  score?: number;
+  scored_by?: number;
+  rank?: number;
+  popularity?: number;
+  members?: number;
+  favorites?: number;
 
-  synopsis?: string | null;
-  background?: string | null;
+  synopsis?: string;
+  background?: string;
 
-  season?: "spring" | "summer" | "fall" | "winter" | (string & {}) | null;
-  year?: number | null;
-  broadcast?: Broadcast | null;
+  season?: "spring" | "summer" | "fall" | "winter" | (string & {});
+  year?: number;
+  broadcast?: Broadcast;
 
   producers: Entity[];
   licensors: Entity[];
@@ -78,15 +78,15 @@ export interface ImageVariant {
 }
 
 export interface Trailer {
-  youtube_id?: string | null;
-  url?: string | null;
-  embed_url?: string | null;
+  youtube_id?: string;
+  url?: string;
+  embed_url?: string;
   images?: {
-    image_url?: string | null;
-    small_image_url?: string | null;
-    medium_image_url?: string | null;
-    large_image_url?: string | null;
-    maximum_image_url?: string | null;
+    image_url?: string;
+    small_image_url?: string;
+    medium_image_url?: string;
+    large_image_url?: string;
+    maximum_image_url?: string;
   };
 }
 
@@ -96,8 +96,8 @@ export interface Title {
 }
 
 export interface Aired {
-  from: string | null;
-  to: string | null;
+  from: string;
+  to: string;
   prop: {
     from: DateProp;
     to: DateProp;
@@ -106,16 +106,16 @@ export interface Aired {
 }
 
 export interface DateProp {
-  day: number | null;
-  month: number | null;
-  year: number | null;
+  day: number;
+  month: number;
+  year: number;
 }
 
 export interface Broadcast {
-  day?: string | null; // e.g., "Saturdays"
-  time?: string | null; // e.g., "01:00"
-  timezone?: string | null; // e.g., "Asia/Tokyo"
-  string?: string | null; // e.g., "Saturdays at 01:00 (JST)"
+  day?: string; // e.g., "Saturdays"
+  time?: string; // e.g., "01:00"
+  timezone?: string; // e.g., "Asia/Tokyo"
+  string?: string; // e.g., "Saturdays at 01:00 (JST)"
 }
 
 export interface Entity {
@@ -135,4 +135,8 @@ export interface Genre {
 
 export interface GenreListApiResponse {
   data?: Genre[];
+}
+
+export interface AnimeByIDResponse {
+  data: Anime;
 }

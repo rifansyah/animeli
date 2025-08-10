@@ -1,5 +1,9 @@
 import api from ".";
-import { AnimeListApiResponse, GenreListApiResponse } from "./anime.type";
+import {
+    AnimeByIDResponse,
+    AnimeListApiResponse,
+    GenreListApiResponse,
+} from "./anime.type";
 
 export interface AnimeListParams {
   page?: number;
@@ -12,6 +16,10 @@ export const getAnimeList = ({ page, genres }: AnimeListParams) => {
   };
 
   return api.get<AnimeListApiResponse>("/anime", { params });
+};
+
+export const getAnimeByID = (id: number) => {
+  return api.get<AnimeByIDResponse>(`/anime/${id}`);
 };
 
 export const getGenreList = () => {

@@ -33,10 +33,11 @@ export default function RootLayout() {
           <BottomSheetModalProvider>
             <Stack>
               <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+              <Stack.Screen name="anime-details/[id]" options={{ headerShown: false }} />
               <Stack.Screen name="+not-found" />
             </Stack>
           </BottomSheetModalProvider>
-          <StatusBar style="auto" />
+          <StatusBar style="light" />
         </ThemeProvider>
       </GestureHandlerRootView>
     </QueryClientProvider>

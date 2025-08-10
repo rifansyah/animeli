@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
-import { TouchableOpacity } from "react-native";
 import { Colors } from "@/constants/Colors";
 import { IconProps } from "@/modules/home/components/BottomTabs";
+import React, { useEffect } from "react";
+import { TouchableOpacity } from "react-native";
 import Animated, {
   interpolate,
   useAnimatedStyle,
@@ -18,7 +18,7 @@ interface Props {
 }
 
 const TabItem = ({ label, isFocused, onPress, renderIcon }: Props) => {
-  const color = isFocused ? Colors.light.primary : Colors.light.grey;
+  const color = isFocused ? Colors.primary : Colors.grey;
 
   const scale = useSharedValue(0);
 

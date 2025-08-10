@@ -12,9 +12,6 @@ export interface IconProps {
 
 const icons = {
   index: (props: IconProps) => <AntDesign name="home" size={24} {...props} />,
-  list: (props: IconProps) => (
-    <AntDesign name="antdesign" size={24} {...props} />
-  ),
   favorite: (props: IconProps) => (
     <AntDesign name="hearto" size={24} {...props} />
   ),
